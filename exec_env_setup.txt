@@ -3,7 +3,7 @@
 # Install Git client software in your local system
 # Login to Git and create repo
 # Git clone, checkout and pull locally
-git clone <repo_url>
+git clone https://github.com/tarunsharma1808/streaming-examples-py.git
 git checkput
 git pull
 # Add .gitignore file inside
@@ -21,14 +21,14 @@ git push origin master
 # Execute the lambda to create an single-node EMR cluster
 
 # Open an SSH session with the EMR cluster from your local system,
-ssh -i spark.pem hadoop@<cluster_dns_name>
+ssh -i spark.pem hadoop@ec2-34-255-4-207.eu-west-1.compute.amazonaws.com
 export LC_ALL=C
 sudo yum update -y
 sudo yum install git-core -y
 pip install pyyaml==5.3.1
 
-git clone <repo_url>
-cd <repo_dir>
+git clone https://github.com/tarunsharma1808/streaming-examples-py.git
+cd streaming-examples-py
 export PYTHONPATH="$PWD"
 
 # Copy 2 files (private key and .secrets) from local to EMR cluster's master node,
